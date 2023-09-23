@@ -24,7 +24,7 @@ dependencies:
   - jupyterlab
   - pathlib
   - pyprojroot
-  {% endif %}
+  {% endif -%}
   - pip
   - python={{ cookiecutter.python_version }}
   - pip:

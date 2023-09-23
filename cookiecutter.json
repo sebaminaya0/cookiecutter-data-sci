@@ -6,5 +6,6 @@
     "email" : "sebastian.minaya1998@gmail.com",
     "github_username" : "sebaminaya0",
     "project_packages" : ["all","minimal"],
-    "python_version" : "3.8.5"
+    "python_version" : "3.8.5",
+    "project_version" : "0.1.0"
 }
