@@ -1,0 +1,33 @@
+# conda env create --file environment.yml
+name: {{ cookiecutter.project_slug }}
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  {% if cookiecutter.project_packages == 'all' -%}
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - statsmodels
+  - scipy
+  - fs
+  - jupyter
+  - jupyterlab
+  - pathlib
+  - pyprojroot
+  {% elif cookiecutter.project_packages == 'minimal' -%}
+  - fs
+  - jupyter
+  - jupyterlab
+  - pathlib
+  - pyprojroot
+  {% endif %}
+  - pip
+  - python={{ cookiecutter.python_version }}
+  - pip:
+    {% if cookiecutter.project_packages == 'minimal' -%}
+    - pyhere
+    {% endif %}

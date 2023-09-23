@@ -1,0 +1,9 @@
+# conda env create --file environment.yml
+name: cookiecutter-personal-data-science
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - cookiecutter
+  prefix: /Users/username/miniconda3/envs/cookiecutter-personal-data-science
+    
